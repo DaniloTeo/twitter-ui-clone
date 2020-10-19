@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
 import { TweetType } from '../../../types'
-import styles from './styles'
+import {Container, TweetHeaderContainer, TweetHeaderNames, Name, Username, CreatedAt, Content, Image} from './styles'
 import { Entypo } from '@expo/vector-icons'
+import {View} from 'react-native'
 
 import Footer from '../Footer'
 
@@ -12,22 +12,22 @@ export type MainContainerProps = {
 
 const MainContainer = ({ tweet }: MainContainerProps) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.tweetHeaderContainer}>
-        <View style={styles.tweetHeaderNames}>
-          <Text style={styles.name}>{tweet.user.name}</Text>
-          <Text style={styles.username}>@{tweet.user.username}</Text>
-          <Text style={styles.createdAt}>15s</Text>
-        </View>
+    <Container>
+      <TweetHeaderContainer>
+        <TweetHeaderNames>
+          <Name>{tweet.user.name}</Name>
+          <Username >@{tweet.user.username}</Username>
+          <CreatedAt >15s</CreatedAt>
+        </TweetHeaderNames>
         <Entypo name={'chevron-down'} size={16} color={'grey'} />
-      </View>
+      </TweetHeaderContainer>
 
       <View>
-        <Text style={styles.content}>{tweet.content}</Text>
-        <Image style={styles.image} source={{ uri: tweet.image }} />
+        <Content>{tweet.content}</Content>
+        <Image source={{ uri: tweet.image }} />
       </View>
       <Footer tweet={tweet} />
-    </View>
+    </Container>
   )
 }
 

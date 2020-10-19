@@ -1,37 +1,36 @@
-import { StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
 
-const styles = StyleSheet.create({
-  container: { flex: 1, marginHorizontal: 10 },
-  tweetHeaderContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  tweetHeaderNames: {
-    flexDirection: 'row'
-  },
-  username: {
-    marginRight: 5,
-    color: 'grey'
-  },
-  name: {
-    marginRight: 5,
-    fontWeight: 'bold'
-  },
-  createdAt: {
-    marginRight: 5,
-    color: 'grey'
-  },
-  content: {
-    marginTop: 5,
-    lineHeight: 18
-  },
-  image: {
-    width: '100%',
-    height: 200,
-    marginVertical: 10,
-    resizeMode: 'cover',
-    borderRadius: 15
-  }
-})
-
-export default styles
+export const Container = styled.View`
+  flex: 1;
+  margin-horizontal: 10px;
+`
+export const TweetHeaderContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+`
+export const TweetHeaderNames = styled.View`
+  flex-direction: row;
+`
+export const Name = styled.Text`
+  margin-right: 5px;
+  font-weight: bold
+`
+export const Username = styled.Text`
+  margin-right: 5px;
+  color: grey
+`
+export const CreatedAt = styled.Text`
+  margin-right: 5px;
+  color: grey;
+`
+export const Content = styled.Text`
+  margin-right: 5px;
+  line-height: 18px;
+`
+export const Image = styled.Image`
+  width: 100%;
+  height: 200px;
+  margin-vertical: 10px;
+  resize-mode: cover;
+  border-radius: 15px;
+`

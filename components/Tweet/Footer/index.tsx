@@ -1,7 +1,6 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
 import { TweetType } from '../../../types'
-import styles from './styles'
+import {Container, IconContainer, Number} from './styles'
 import { AntDesign, Feather, EvilIcons } from '@expo/vector-icons'
 
 export type FooterProps = {
@@ -10,25 +9,25 @@ export type FooterProps = {
 
 const Footer = ({ tweet }: FooterProps) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.iconContainer}>
+    <Container>
+      <IconContainer>
         <Feather name={'message-circle'} size={20} color={'grey'} />
-        <Text style={styles.number}>{tweet.numberOfComments}</Text>
-      </View>
-      <View style={styles.iconContainer}>
-        <EvilIcons name={'retweet'} size={25} color={'grey'} />
-        <Text style={styles.number}>{tweet.numberOfRetweets}</Text>
-      </View>
+        <Number>{tweet.numberOfComments}</Number>
+      </IconContainer>
+      <IconContainer>
+        <EvilIcons name={'retweet'} size={28} color={'grey'} />
+        <Number>{tweet.numberOfRetweets}</Number>
+      </IconContainer>
 
-      <View style={styles.iconContainer}>
+      <IconContainer>
         <AntDesign name={'hearto'} size={20} color={'grey'} />
-        <Text style={styles.number}>{tweet.numberOfLikes}</Text>
-      </View>
+        <Number>{tweet.numberOfLikes}</Number>
+      </IconContainer>
 
-      <View style={styles.iconContainer}>
-        <EvilIcons name={'share-google'} size={25} color={'grey'} />
-      </View>
-    </View>
+      <IconContainer>
+        <EvilIcons name={'share-google'} size={28} color={'grey'} />
+      </IconContainer>
+    </Container>
   )
 }
 

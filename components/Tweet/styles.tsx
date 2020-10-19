@@ -1,13 +1,9 @@
-import { StyleSheet } from 'react-native'
+import styled from 'styled-components/native'
 
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    flexDirection: 'row',
-    padding: 15,
-    borderBottomWidth: 1,
-    borderColor: 'grey'
-  }
-})
-
-export default styles
+export const Container = styled.View`
+  width: 100%;
+  flex-direction: row;
+  padding: 15px;
+  border-bottom-width: 1px;
+  border-color: lightgrey
+`

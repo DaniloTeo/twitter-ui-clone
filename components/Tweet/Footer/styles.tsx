@@ -1,12 +1,19 @@
-import { StyleSheet } from 'react-native'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  number: {}
-})
+import styled from 'styled-components/native'
 
-export default styles
+export const Container = styled.View`
+  flex:1;
+  flex-direction: row;
+  justify-content: space-between
+`
+export const IconContainer = styled.View`
+  flex-direction:row;
+  align-items: center;
+`
+
+export const Number = styled.Text`
+  color: grey;
+  margin-left: 5px;
+  text-align: center
+`
+
