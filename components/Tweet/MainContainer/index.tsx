@@ -3,6 +3,8 @@ import { TweetType } from '../../../types'
 import {Container, TweetHeaderContainer, TweetHeaderNames, Name, Username, CreatedAt, Content, Image} from './styles'
 import { Entypo } from '@expo/vector-icons'
 import {View} from 'react-native'
+import moment from 'moment'
+
 
 import Footer from '../Footer'
 
@@ -17,7 +19,7 @@ const MainContainer = ({ tweet }: MainContainerProps) => {
         <TweetHeaderNames>
           <Name>{tweet.user.name}</Name>
           <Username >@{tweet.user.username}</Username>
-          <CreatedAt >15s</CreatedAt>
+  <CreatedAt >{moment(tweet.createdAt).fromNow(true)}</CreatedAt>
         </TweetHeaderNames>
         <Entypo name={'chevron-down'} size={16} color={'grey'} />
       </TweetHeaderContainer>
