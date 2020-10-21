@@ -1,11 +1,17 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-import {Container } from  './styles'
-import {EvilIcons} from '@expo/vector-icons'
+import {Container,PostTweetButton,TopElements,StyledText } from  './styles'
+import {AntDesign} from '@expo/vector-icons'
+import Colors from '../../constants/Colors'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 const NewTweetScreen = () =>{
     return(
         <Container>
-            <Text>Hello world</Text>
+            <TopElements>
+                <AntDesign name="close" size={30} color={Colors.light.tint}/>
+                <PostTweetButton>
+                    <StyledText>Tweet</StyledText>
+                </PostTweetButton>
+            </TopElements>
         </Container>
 
     )
